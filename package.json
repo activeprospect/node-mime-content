@@ -1,0 +1,32 @@
+{
+  "name": "mime-content",
+  "description": "A simple mime-type based string parser",
+  "author": "Alex Wolfe <alex@activeprospect.com>",
+  "version": "0.0.1",
+  "main": "mime-content.js",
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/mit-license.php"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/activeprospect/node-mime-content.git"
+  },
+  "engines": {
+    "node": ">=0.8.1"
+  },
+  "scripts": {
+    "test": "cake test",
+    "prepublish": "cake build"
+  },
+  "dependencies": {
+    "cheerio": ">= 0.12.1",
+    "xpath": ">= 0.0.5",
+    "xmldom": ">= 0.1.16"
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.4.0",
+    "mocha": ">= 1.7.x",
+    "chai": ">= 1.4.x"
+  }
+}
