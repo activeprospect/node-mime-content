@@ -5,7 +5,7 @@ A node.js module for parsing strings based on MIME Type.
 
 ## Usage
 
-This module supports a parsing content for small handful of common MIME Types. Pull requests for adding additional types
+This module supports parsing content for small handful of common MIME Types. Pull requests for adding additional types
 are welcome.
 
 
