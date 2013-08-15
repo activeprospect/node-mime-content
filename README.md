@@ -2,6 +2,7 @@
 
 A node.js module for parsing strings based on MIME Type.
 
+[![Build Status](https://travis-ci.org/activeprospect/node-mime-content.png?branch=master)](https://travis-ci.org/activeprospect/node-mime-content)
 
 ## Usage
 
