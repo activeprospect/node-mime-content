@@ -52,8 +52,10 @@ json.toString()
 
 Both the application/xml and text/xml MIME Types are supported.
 
-After parsing a XML string, XPath can be used to query the parsed content. The [xpath](https://github.com/goto100/xpath) module
-is used to query the DOM. All DOM 3 [XPath expressions](http://www.w3.org/TR/xpath/#section-Expressions) are supported.
+After parsing a XML string, the [xmldom](https://github.com/jindw/xmldom) document is available. Also, XPath support is
+provided by the [xpath](https://github.com/goto100/xpath) module. All DOM 3 [XPath expressions](http://www.w3.org/TR/xpath/#section-Expressions)
+are supported.
+
 
 By default, the XML parser assumes your XPath expression is looking for a single DOM node so it returns the first match
 in the document. If you'd like all matching nodes instead, use the second optional boolean parameter with your query. Pass
@@ -66,11 +68,18 @@ var content = require('mime-content');
 
 var xml = content('<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>', 'text/xml');
 
-xml('//people/person/name/text()');
+xml.xpath('/people/person/name/text()').data;
 => 'Bob Smith'
 
-xml('//people/person/name/text()', true);
+xml.xpath('/people/person/name/text()', true).map(function(text) {
+  return text.data;
+});
 => ['Bob Smith', 'Jimmy Dean']
+
+xml.xpath('/people/person/@id', true).map(function(attr) {
+  return attr.value;
+});
+=> ['123', '456']
 
 xml.toString();
 => '<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>'

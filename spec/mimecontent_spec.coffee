@@ -9,11 +9,11 @@ describe 'MIME Content', ->
 
   it 'should parse application XML', ->
     parsed = content('<foo>bar</foo>', 'application/xml')
-    assert.equal parsed('//foo/text()'), 'bar'
+    assert.equal parsed.xpath('//foo/text()').data, 'bar'
 
   it 'should parse text XML', ->
     parsed = content('<foo>bar</foo>', 'text/xml')
-    assert.equal parsed('//foo/text()'), 'bar'
+    assert.equal parsed.xpath('//foo/text()').data, 'bar'
 
   it 'should parse HTML', ->
     parsed = content('<html><body><h1>Header!</h1></body></html>', 'text/html')
