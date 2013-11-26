@@ -11,19 +11,23 @@ mime = (contentType) ->
 parse = (content, contentType) ->
   mimeType = mime(contentType)
 
-  if (mimeType == 'application/xml' || mimeType == 'text/xml')
-    xml(content)
+  parsed =
+    if (mimeType == 'application/xml' || mimeType == 'text/xml')
+      xml(content)
 
-  else if (mimeType == 'application/json')
-    json(content)
+    else if (mimeType == 'application/json')
+      json(content)
 
-  else if (mimeType == 'application/x-www-form-urlencoded')
-    urlEncoded(content)
+    else if (mimeType == 'application/x-www-form-urlencoded')
+      urlEncoded(content)
 
-  else if (mimeType == 'text/html')
-    html(content)
+    else if (mimeType == 'text/html')
+      html(content)
 
-  else
-    content
+    else
+      content
+
+  parsed.mimeType = mimeType
+  parsed
 
 module.exports = parse

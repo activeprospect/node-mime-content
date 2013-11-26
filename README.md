@@ -27,6 +27,9 @@ html('h1.big').text();
 
 html.toString();
 => '<html><body><h1 class="big">Header!</h1></body></html>'
+
+html.mimeType
+=> 'text/html'
 ```
 
 
@@ -45,6 +48,9 @@ json.foo
 
 json.toString()
 => '{"foo":"bar"}'
+
+json.mimeType
+=> 'application/json'
 ```
 
 
@@ -55,7 +61,6 @@ Both the application/xml and text/xml MIME Types are supported.
 After parsing a XML string, the [xmldom](https://github.com/jindw/xmldom) document is available. Also, XPath support is
 provided by the [xpath](https://github.com/goto100/xpath) module. All DOM 3 [XPath expressions](http://www.w3.org/TR/xpath/#section-Expressions)
 are supported.
-
 
 By default, the XML parser assumes your XPath expression is looking for a single DOM node so it returns the first match
 in the document. If you'd like all matching nodes instead, use the second optional boolean parameter with your query. Pass
@@ -83,6 +88,9 @@ xml.xpath('/people/person/@id', true).map(function(attr) {
 
 xml.toString();
 => '<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>'
+
+xml.mimeType
+=> 'text/xml'
 ```
 
 
@@ -102,6 +110,9 @@ qs.foo
 qs.baz
 => 'bip'
 
-json.toString()
+qs.toString()
 => 'foo=bar&foo=baz&baz=bip'
+
+qs.mimeType
+=> 'application/x-www-form-urlencoded'
 ```
