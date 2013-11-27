@@ -6,7 +6,7 @@ A node.js module for parsing strings based on MIME Type.
 
 ## Usage
 
-This module supports parsing content for a small handful of common MIME Types. Pull requests for adding additional types
+This module supports parsing strings for a small handful of common MIME Types. Pull requests for adding additional types
 are welcome.
 
 
@@ -91,6 +91,22 @@ xml.toString();
 
 xml.mimeType
 => 'text/xml'
+```
+
+The `toObject()` function uses [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) to return an object representation
+of the XML. This function accepts an options object that is passed directly to the xml2js Parser. See the xml2js Readme for
+the supported options.
+
+```javascript
+var xml = content('<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>', 'text/xml');
+xml.toObject({explicitArray: false, explicitRoot: false, mergeAttrs: true});
+=>
+{
+  person: [
+    { id: '123', name: 'Bob Smith' },
+    { id: '456', name: 'Jimmy Dean' }
+  ]
+}
 ```
 
 

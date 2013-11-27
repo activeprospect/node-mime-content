@@ -22,7 +22,8 @@
   "dependencies": {
     "cheerio": ">= 0.12.1",
     "xpath": ">= 0.0.5",
-    "xmldom": ">= 0.1.16"
+    "xmldom": ">= 0.1.16",
+    "xml2js": "> 0.0.0"
   },
   "devDependencies": {
     "coffee-script": ">= 1.4.0",
