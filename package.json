@@ -2,7 +2,7 @@
   "name": "mime-content",
   "description": "A simple mime-type based string parser",
   "author": "Alex Wolfe <alex@activeprospect.com>",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "mime-content.js",
   "licenses": [{
     "type": "MIT",

@@ -14,7 +14,7 @@ describe 'XML', ->
     content = '<foo><bar id="attr"></bar></foo>'
     assert.equal parse(content).xpath('//bar/@id').value, 'attr'
 
-  it 'should retrive multiple attributes with xpaht', ->
+  it 'should retrive multiple attributes with xpath', ->
     content = '<bars><bar id="attr1"/><bar id="attr2"/></bars>'
     attrs = parse(content).xpath('//bar/@id', true).map (r) ->
       r.value
