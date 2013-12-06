@@ -31,16 +31,3 @@ describe 'MIME Content', ->
     value = content('foo=bar', 'text/donkies')
     assert.equal value, 'foo=bar'
 
-  it 'should reveal mimetype', ->
-    assertMimeType = (body, mimeType) ->
-      assert.equal mimeType, content(body, mimeType).mimeType
-
-    assertMimeType('{"foo":"bar"}', 'application/json')
-    assertMimeType('<foo>bar</foo>', 'application/xml')
-    assertMimeType('<foo>bar</foo>', 'text/xml')
-    assertMimeType('<html><body><h1>Header!</h1></body></html>', 'text/html')
-    assertMimeType('foo=bar', 'application/x-www-form-urlencoded')
-
-    assert.isUndefined content('foo=bar').mimeType
-    assert.isUndefined content('foo=bar', 'text/donkies').mimeType
-

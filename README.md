@@ -27,9 +27,6 @@ html('h1.big').text();
 
 html.toString();
 => '<html><body><h1 class="big">Header!</h1></body></html>'
-
-html.mimeType
-=> 'text/html'
 ```
 
 
@@ -48,9 +45,6 @@ json.foo
 
 json.toString()
 => '{"foo":"bar"}'
-
-json.mimeType
-=> 'application/json'
 ```
 
 
@@ -88,9 +82,6 @@ xml.xpath('/people/person/@id', true).map(function(attr) {
 
 xml.toString();
 => '<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>'
-
-xml.mimeType
-=> 'text/xml'
 ```
 
 The `toObject()` function uses [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) to return an object representation
@@ -128,7 +119,4 @@ qs.baz
 
 qs.toString()
 => 'foo=bar&foo=baz&baz=bip'
-
-qs.mimeType
-=> 'application/x-www-form-urlencoded'
 ```

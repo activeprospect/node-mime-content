@@ -27,7 +27,6 @@ parse = (content, contentType) ->
     else
       content
 
-  parsed.mimeType = mimeType
   parsed
 
 module.exports = parse
