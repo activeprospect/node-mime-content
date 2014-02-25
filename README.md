@@ -24,9 +24,6 @@ var html = content('<html><body><h1 class="big">Header!</h1></body></html>', 'te
 
 html('h1.big').text();
 => 'Header!'
-
-html.toString();
-=> '<html><body><h1 class="big">Header!</h1></body></html>'
 ```
 
 
@@ -42,9 +39,6 @@ var json = content('{"foo":"bar"}', 'application/json');
 
 json.foo
 => 'bar'
-
-json.toString()
-=> '{"foo":"bar"}'
 ```
 
 
@@ -60,7 +54,6 @@ By default, the XML parser assumes your XPath expression is looking for a single
 in the document. If you'd like all matching nodes instead, use the second optional boolean parameter with your query. Pass
 `true` to return all matching nodes.
 
-Use the `toString()` function to retrieve the un-parsed content.
 
 ```javascript
 var content = require('mime-content');
@@ -79,10 +72,8 @@ xml.xpath('/people/person/@id', true).map(function(attr) {
   return attr.value;
 });
 => ['123', '456']
-
-xml.toString();
-=> '<people><person id="123"><name>Bob Smith</name></person><person id="456"><name>Jimmy Dean</name></person></people>'
 ```
+
 
 The `toObject()` function uses [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) to return an object representation
 of the XML. This function accepts an options object that is passed directly to the xml2js Parser. See the xml2js Readme for
@@ -103,8 +94,7 @@ xml.toObject({explicitArray: false, explicitRoot: false, mergeAttrs: true});
 
 ### URL Encoding
 
-After parsing a `application/x-www-form-urlencoded` string, a regular object is returned. Use the `toString()` function
-on that object to retrieve the un-parsed content.
+After parsing a `application/x-www-form-urlencoded` string, a regular object is returned.
 
 ```javascript
 var content = require('mime-content');
@@ -116,7 +106,4 @@ qs.foo
 
 qs.baz
 => 'bip'
-
-qs.toString()
-=> 'foo=bar&foo=baz&baz=bip'
 ```

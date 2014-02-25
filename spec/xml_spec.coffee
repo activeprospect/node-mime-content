@@ -3,13 +3,6 @@ parse = require('../src/xml')
 
 describe 'XML', ->
 
-  it 'should be coercable to a string', ->
-    content = '<foo><bar/></foo>'
-    assert.equal parse(content).toString(), content
-
-    content = '<bars><bar>text1</bar><bar>text2</bar></bars>'
-    assert.equal parse(content).toString(), content
-
   it 'should retrieve attribute with xpath', ->
     content = '<foo><bar id="attr"></bar></foo>'
     assert.equal parse(content).xpath('//bar/@id').value, 'attr'

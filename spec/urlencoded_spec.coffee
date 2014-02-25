@@ -3,10 +3,6 @@ parse = require('../src/urlencoded')
 
 describe 'URL encoded', ->
 
-  it 'should be coercable to a string', ->
-    content = 'foo=bar&baz=bip'
-    assert.equal parse(content).toString(), content
-
   it 'should retrieve object', ->
     content = 'foo=bar&baz=bip'
     parsed = parse(content)
