@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
-    "xml2js": "> 0.0.0",
-    "xmldom": ">= 0.1.16",
-    "xpath": ">= 0.0.5"
+    "xml2js": "~0.4.23",
+    "xmldom": "~0.6.0",
+    "xpath": "~0.0.32"
   },
   "devDependencies": {
     "chai": "^4.3.4",
@@ -26,6 +26,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "mocha": "^4.1.0"
+    "mocha": "^8.4.0"
   }
 }
