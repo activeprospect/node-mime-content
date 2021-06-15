@@ -1,1 +1,1 @@
-module.exports = require('./lib/mimecontent')
+module.exports = require('./lib/mimecontent');

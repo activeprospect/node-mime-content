@@ -1,7 +1,6 @@
 {
   "name": "mime-content",
   "description": "A simple mime-type based string parser",
-  "author": "Alex Wolfe <alex@activeprospect.com>",
   "version": "0.0.7",
   "main": "mime-content.js",
   "license": "MIT",
@@ -9,22 +8,24 @@
     "type": "git",
     "url": "https://github.com/activeprospect/node-mime-content.git"
   },
-  "engines": {
-    "node": ">=0.8.1"
-  },
   "scripts": {
-    "test": "cake test",
-    "prepublish": "cake build"
+    "test": "mocha",
+    "fixlint": "eslint . --fix",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "cheerio": ">= 0.12.1",
-    "xml2js": "> 0.0.0",
-    "xmldom": ">= 0.1.16",
-    "xpath": ">= 0.0.5"
+    "cheerio": "^1.0.0-rc.10",
+    "xml2js": "~0.4.23",
+    "xmldom": "~0.6.0",
+    "xpath": "~0.0.32"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coffee-script": "^1.10.0",
-    "mocha": "^2.4.5"
+    "chai": "^4.3.4",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.4.0"
   }
 }
