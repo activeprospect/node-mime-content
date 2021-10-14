@@ -46,7 +46,7 @@ json.foo
 
 Both the application/xml and text/xml MIME Types are supported.
 
-After parsing a XML string, the [xmldom](https://github.com/jindw/xmldom) document is available. Also, XPath support is
+After parsing a XML string, the [xmldom](https://github.com/xmldom/xmldom) document is available. Also, XPath support is
 provided by the [xpath](https://github.com/goto100/xpath) module. All DOM 3 [XPath expressions](http://www.w3.org/TR/xpath/#section-Expressions)
 are supported.
 

@@ -16,16 +16,10 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "xml2js": "~0.4.23",
-    "xmldom": "~0.6.0",
+    "@xmldom/xmldom": "^0.7.5",
     "xpath": "~0.0.32"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "eslint": "^7.23.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "mocha": "^8.4.0"
+    "@activeprospect/integration-dev-dependencies": "^1.1.7"
   }
 }
