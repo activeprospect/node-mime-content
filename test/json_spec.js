@@ -11,7 +11,7 @@ describe('JSON', function () {
       parse('boom!');
     } catch(err){
       assert.instanceOf(err, Error);
-      assert.equal(err.message, 'Unexpected token b in JSON at position 0');
+      assert.equal(err.message, 'Error: "boom!" is not valid JSON');
     }
   });
 });
